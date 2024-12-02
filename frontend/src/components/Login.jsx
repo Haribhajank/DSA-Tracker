@@ -12,6 +12,9 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            const apiUrl = process.env.REACT_APP_BACKEND_URL;
+            console.log(apiUrl); // Should log: https://your-backend-url.onrender.com
+
             const res = await axios.post('${process.env.REACT_APP_BACKEND_URL}/login', { username, password });
             login(res.data.token);
             alert(res.data.message);
