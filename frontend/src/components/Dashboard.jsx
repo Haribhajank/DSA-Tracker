@@ -17,7 +17,7 @@ const Dashboard = () => {
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-start py-8">
             <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-8">
-                <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Your DSA Progress</h1>
+                <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Update Your DSA Progress</h1>
                 <div className="space-y-6">
                     {Object.keys(progress).map((topic) => (
                         <div key={topic} className="flex items-center justify-between">
