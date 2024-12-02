@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Dashboard = () => {
+
     const [progress, setProgress] = useState({ Arrays: 0, Graphs: 0, Trees: 0 });
 
     const updateProgress = async () => {
         const token = localStorage.getItem('token');
         try {
-            await axios.post('${process.env.REACT_APP_BACKEND_URL}/update-progress', { token, progress });
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/update-progress`, { token, progress });
             alert('Progress updated');
         } catch (err) {
             alert('Error updating progress');
