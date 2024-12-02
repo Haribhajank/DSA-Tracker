@@ -7,7 +7,7 @@ const Dashboard = () => {
     const updateProgress = async () => {
         const token = localStorage.getItem('token');
         try {
-            await axios.post('http://localhost:5000/update-progress', { token, progress });
+            await axios.post('${process.env.REACT_APP_BACKEND_URL}/update-progress', { token, progress });
             alert('Progress updated');
         } catch (err) {
             alert('Error updating progress');
