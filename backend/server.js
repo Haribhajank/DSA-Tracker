@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 
 const app = express();
-app.use(cors({ origin: 'https://dsa-tracker-peach.vercel.app/' }));
+app.use(cors({ origin: 'https://dsa-tracker-peach.vercel.app' }));
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb+srv://haribhajank5:j7vbWLuUymNCKLFU@cluster2.kp2snpl.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
